@@ -1,14 +1,14 @@
-#!/bin/sh
+# #!/bin/sh
 
-# Run gitleaks to check for secrets
-gitleaks --path=. --report=gitleaks-report.txt
+# # Run gitleaks to check for secrets
+# gitleaks --path=. --report=gitleaks-report.txt
 
-# Check the exit code of gitleaks
-if [ $? -eq 0 ]; then
-  echo "No secrets detected. Commit allowed."
-  exit 0
-else
-  echo "Secrets detected in the code. Commit rejected."
-  echo "Please remove the secrets before committing."
-  exit 1
-fi
+# # Check the exit code of gitleaks
+# if [ $? -eq 0 ]; then
+#   echo "No secrets detected. Commit allowed."
+#   exit 0
+# else
+#   echo "Secrets detected in the code. Commit rejected."
+#   echo "Please remove the secrets before committing."
+#   exit 1
+# fi
