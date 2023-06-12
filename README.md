@@ -125,6 +125,7 @@ import sys
 def run_gitleaks():
     try:
         subprocess.run(['gitleaks', '--path', '.'], check=True)
+....
     except subprocess.CalledProcessError:
         print("Error: Secrets detected in the code. Commit rejected.")
         sys.exit(1)
