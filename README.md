@@ -1,4 +1,4 @@
-<!-- Було реалізовано два варіанти (другий варіант увійшов у реліз)
+Було реалізовано два варіанти (другий варіант увійшов у реліз)
 перший варіант ми створюємо файл pre-commit в .git/hooks
 
 має вигляд:
@@ -98,8 +98,8 @@ if __name__ == '__main__':
 
 я ж використав скрипт 
 
-<!-- #!/usr/bin/env python3 -->
-<!-- import subprocess
+#!/usr/bin/env python3
+import subprocess
 import sys
 
 def run_gitleaks():
@@ -113,10 +113,10 @@ def main():
     run_gitleaks()
 
 if __name__ == '__main__':
-    main() -->
+    main()
 
 
-<!-- я реалізував третій варіант
+я реалізував третій варіант
 
 #!/usr/bin/env python3
 import subprocess
@@ -134,4 +134,4 @@ def main():
     run_gitleaks()
 
 if __name__ == '__main__':
-    main() -->
+    main()
