@@ -1,14 +1,16 @@
-# #!/bin/sh
+#!/usr/bin/env python3
+import subprocess
+import sys
 
-# # Run gitleaks to check for secrets
-# gitleaks --path=. --report=gitleaks-report.txt
+def run_gitleaks():
+    try:
+        subprocess.run(['gitleaks', '--path', '.'], check=True)
+    except subprocess.CalledProcessError:
+        print("Error: Secrets detected in the code. Commit rejected.")
+        sys.exit(1)
 
-# # Check the exit code of gitleaks
-# if [ $? -eq 0 ]; then
-#   echo "No secrets detected. Commit allowed."
-#   exit 0
-# else
-#   echo "Secrets detected in the code. Commit rejected."
-#   echo "Please remove the secrets before committing."
-#   exit 1
-# fi
+def main():
+    run_gitleaks()
+
+if __name__ == '__main__':
+    main()
